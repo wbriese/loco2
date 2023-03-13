@@ -1,30 +1,42 @@
 package wbriese.loco2;
 
+import java.util.Locale;
+
 import javafx.application.Application;
-import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.layout.StackPane;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
+import javafx.scene.Scene;
+import javafx.scene.layout.BorderPane;
 
 
-/**
- * JavaFX App
- */
 public class App extends Application {
+	@Override
+	public void start(Stage primaryStage) {
 
-    @Override
-    public void start(Stage stage) {
-        var javaVersion = SystemInfo.javaVersion();
-        var javafxVersion = SystemInfo.javafxVersion();
-
-        var label = new Label("Hello, JavaFX " + javafxVersion + ", running on Java " + javaVersion + ".");
-        var scene = new Scene(new StackPane(label), 640, 480);
-        stage.setScene(scene);
-        stage.show();
-    }
-
-    public static void main(String[] args) {
-        launch();
-    }
-
+		// set Layout 
+		double width=Screen.getPrimary().getVisualBounds().getWidth();
+		double height=Screen.getPrimary().getVisualBounds().getHeight()-20;
+		
+			try {
+				
+			Locale.setDefault(new Locale("en", "US"));				
+			BorderPane root=new BorderPane();
+			Navigation navigator=new Navigation(root);
+			navigator.createStartPage();
+					
+			Scene scene = new Scene(root,width,height);
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			primaryStage.setScene(scene);
+			primaryStage.setTitle("Loading Computer");
+			primaryStage.show();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+			
+			
+	}
+	
+	public static void main(String[] args) {
+		launch(args);
+	}
 }

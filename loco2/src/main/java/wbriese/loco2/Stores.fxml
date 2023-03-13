@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wbriese.loco2.StoresController">
+         <children>
+            <VBox spacing="12.0">
+               <children>
+                  <Label text="Weight" />
+                  <Label text="L.C.G." />
+                  <Label text="x-aft" />
+                  <Label text="x-forward" />
+                  <Label text="tcg" />
+                  <Label text="vcg" />
+                  <Label text="Drafts on marks">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" text="dmf">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="52.0" />
+                     </padding>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="20.0" layoutY="244.0" text="dmm">
+                     <padding>
+                        <Insets left="52.0" />
+                     </padding>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="20.0" layoutY="274.0" text="dma">
+                     <padding>
+                        <Insets left="52.0" />
+                     </padding>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="10.0" top="10.0" />
+               </padding>
+            </VBox>
+            <VBox alignment="TOP_RIGHT" prefHeight="400.0" prefWidth="30.0" spacing="12.0">
+               <children>
+                  <Label text="[t]" />
+                  <Label text="[m]" />
+                  <Label text="[m]" />
+                  <Label layoutX="13.0" layoutY="69.0" text="[m]" />
+                  <Label layoutX="13.0" layoutY="69.0" text="[m]" />
+                  <Label layoutX="13.0" layoutY="69.0" text="[m]" />
+                  <Label layoutX="19.0" layoutY="166.0" text="[m]">
+                     <VBox.margin>
+                        <Insets top="49.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label layoutX="19.0" layoutY="242.0" text="[m]" />
+                  <Label layoutX="19.0" layoutY="272.0" text="[m]" />
+               </children>
+               <padding>
+                  <Insets right="3.0" top="10.0" />
+               </padding>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="4.0">
+               <children>
+                  <Spinner fx:id="storeMassSpinner" editable="true">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Spinner>
+                  <Spinner fx:id="lcgSpinner" editable="true" layoutX="10.0" layoutY="10.0" />
+                  <Spinner editable="true" layoutX="10.0" layoutY="35.0" />
+                  <Spinner editable="true" layoutX="10.0" layoutY="60.0" />
+                  <Spinner fx:id="tcgSpinner" editable="true" layoutX="10.0" layoutY="86.0" />
+                  <Spinner fx:id="vcgSpinner" editable="true" layoutX="10.0" layoutY="86.0" />
+                  <Label fx:id="drfLabel" text="1.20">
+                     <VBox.margin>
+                        <Insets top="53.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="drmLabel" layoutX="10.0" layoutY="242.0" text="4.35">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="8.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="draLabel" layoutX="10.0" layoutY="264.0" text="7.06">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="8.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets right="10.0" top="6.0" />
+               </padding>
+            </VBox>
+      <Group fx:id="group">
+         <children>
+            <SVGPath fx:id="sideViewSVG" content="M 0 0" />
+            <Line fx:id="line" endX="100.0" stroke="#40e2ff" strokeMiterLimit="5.0" />
+            <Rectangle fx:id="rectangle" arcHeight="2.0" arcWidth="2.0" fill="#51ff1f" height="10.0" stroke="BLACK" strokeType="INSIDE" width="10.0" />
+         </children>
+         <HBox.margin>
+            <Insets left="100.0" />
+         </HBox.margin>
+      </Group>
+         </children>
+      </HBox>

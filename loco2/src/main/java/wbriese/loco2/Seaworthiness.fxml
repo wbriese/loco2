@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wbriese.loco2.SeaworthinessController">
+   <children>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="680.0">
+         <children>
+            <LineChart fx:id="stabChart" title="GZ curve">
+              <xAxis>
+                <NumberAxis label="Φ [°]" side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis label="GZ [m]" side="LEFT" />
+              </yAxis>
+            </LineChart>
+            <GridPane alignment="CENTER" gridLinesVisible="true" style="-fx-background-color: lightgray;">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label alignment="CENTER" text="Φ [°]" GridPane.halignment="LEFT">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="48.0" layoutY="15.0" text="0°" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="15.0" text="10°" GridPane.columnIndex="2" GridPane.halignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="15.0" text="20°" GridPane.columnIndex="3" GridPane.halignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="15.0" text="30°" GridPane.columnIndex="4" GridPane.halignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="382.0" layoutY="15.0" text="40°" GridPane.columnIndex="5" GridPane.halignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="467.0" layoutY="15.0" text="50°" GridPane.columnIndex="6" GridPane.halignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="15.0" text="60°" GridPane.columnIndex="7" GridPane.halignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="637.0" layoutY="15.0" text="KG*sin Φ " GridPane.halignment="LEFT" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="17.0" layoutY="45.0" text="GZ [m]" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="75.0" text="KN" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <Label text="0.000" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="121.0" layoutY="45.0" text="0.000" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="15.0" text="0.000" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="15.0" text="0.000" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="15.0" text="0.000" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="15.0" text="0.000" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="15.0" text="0.000" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="15.0" text="0.000" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="15.0" text="0.000" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="15.0" text="0.000" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="15.0" text="0.000" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="15.0" text="0.000" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="376.0" layoutY="75.0" text="0.000" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="15.0" text="0.000" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="15.0" text="0.000" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="15.0" text="0.000" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="gz10" layoutX="10.0" layoutY="15.0" text="0.000" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="gz20" layoutX="10.0" layoutY="15.0" text="0.000" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="gz30" layoutX="10.0" layoutY="15.0" text="0.000" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="gz40" layoutX="10.0" layoutY="15.0" text="0.000" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="gz50" layoutX="461.0" layoutY="105.0" text="0.000" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="gz60" layoutX="10.0" layoutY="15.0" text="0.000" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+         </children>
+         <HBox.margin>
+            <Insets left="20.0" />
+         </HBox.margin>
+      </VBox>
+      <VBox prefHeight="200.0" spacing="5.0">
+         <children>
+            <HBox>
+               <children>
+                  <Label prefHeight="17.0" prefWidth="60.0" text="GM (Int)" />
+                  <Label alignment="CENTER" prefWidth="20.0" text="=" />
+                  <Label alignment="CENTER_RIGHT" prefWidth="30.0" text="1.245" textFill="RED" />
+                  <Label alignment="CENTER" prefWidth="20.0" text="≥" />
+                  <Label text="1.67 m" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="60.0" text="GM (Dam)" />
+                  <Label alignment="CENTER" prefWidth="20.0" text="=" />
+                  <Label alignment="CENTER_RIGHT" prefWidth="30.0" text="1.245" textFill="RED" />
+                  <Label alignment="CENTER" prefWidth="20.0" text="≥" />
+                  <Label text="2.000 m" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="32.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="60.0" text="GZ 30°" />
+                  <Label alignment="CENTER" prefWidth="20.0" text="=" />
+                  <Label alignment="CENTER_RIGHT" prefWidth="30.0" text="1.245" textFill="RED" />
+                  <Label alignment="CENTER" prefWidth="20.0" text="≥" />
+                  <Label text="0.20 m" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="55.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="60.0" text="Φ GZmax" />
+                  <Label alignment="CENTER" prefWidth="20.0" text="=" />
+                  <Label alignment="CENTER_RIGHT" prefWidth="30.0" text="29.2" textFill="RED" />
+                  <Label alignment="CENTER" prefWidth="20.0" text="≥" />
+                  <Label text="25.0 °" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="77.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="60.0" text="e 30°" />
+                  <Label alignment="CENTER" prefWidth="20.0" text="=" />
+                  <Label alignment="CENTER_RIGHT" prefWidth="30.0" text="0.007" textFill="RED" />
+                  <Label alignment="CENTER" prefWidth="20.0" text="≥" />
+                  <Label text="0.055 mrad" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="100.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="60.0" text="e 40°" />
+                  <Label alignment="CENTER" prefWidth="20.0" text="=" />
+                  <Label alignment="CENTER_RIGHT" prefWidth="30.0" text="0.010" textFill="RED" />
+                  <Label alignment="CENTER" prefWidth="20.0" text="≥" />
+                  <Label text="0.090 mrad" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="122.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="60.0" text="e 40°-30°" />
+                  <Label alignment="CENTER" prefWidth="20.0" text="=" />
+                  <Label alignment="CENTER_RIGHT" prefWidth="30.0" text="0.003" textFill="RED" />
+                  <Label alignment="CENTER" prefWidth="20.0" text="≥" />
+                  <Label text="0.030 mrad" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="144.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="60.0" text="b/a" />
+                  <Label alignment="CENTER" prefWidth="20.0" text="=" />
+                  <Label alignment="CENTER_RIGHT" prefWidth="30.0" text="0.573" textFill="RED" />
+                  <Label alignment="CENTER" prefWidth="20.0" text="≥" />
+                  <Label text="1.000" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="167.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="60.0" text="Φwind" />
+                  <Label alignment="CENTER" prefWidth="20.0" text="=" />
+                  <Label alignment="CENTER_RIGHT" prefWidth="30.0" text="61.0" textFill="RED" />
+                  <Label alignment="CENTER" prefWidth="20.0" text="≤" />
+                  <Label text="16.0 °" />
+               </children>
+            </HBox>
+         </children>
+         <HBox.margin>
+            <Insets left="20.0" top="5.0" />
+         </HBox.margin>
+      </VBox>
+      <VBox prefHeight="200.0" spacing="5.0">
+         <children>
+            <HBox>
+               <children>
+                  <Label prefHeight="17.0" prefWidth="77.0" text="GMmin(Int)" />
+                  <Label alignment="CENTER" prefWidth="20.0" text="=" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="48.0" text="1.67" textFill="BLUE" />
+                  <Label prefWidth="20.0" text="m">
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="15.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="77.0" text="GMmin(Dam)" />
+                  <Label alignment="CENTER" prefWidth="20.0" text="=" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="48.0" text="2.000" textFill="BLUE" />
+                  <Label prefWidth="20.0" text="m">
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="32.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="77.0" text="GZ(30°)min" />
+                  <Label alignment="CENTER" prefWidth="20.0" text="=" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="48.0" text="0.20" textFill="BLUE" />
+                  <Label prefWidth="20.0" text="m">
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="50.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="77.0" text="Φ (GZmax)min" />
+                  <Label alignment="CENTER" prefWidth="20.0" text="=" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="48.0" text="25" textFill="BLUE" />
+                  <Label prefWidth="20.0" text="°">
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="50.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="77.0" text="e(30°)min" />
+                  <Label alignment="CENTER" prefWidth="20.0" text="=" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="48.0" text="0.055" textFill="BLUE" />
+                  <Label text="mrad">
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="50.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="77.0" text="e(40°)min" />
+                  <Label alignment="CENTER" prefWidth="20.0" text="=" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="48.0" text="0.090" textFill="BLUE" />
+                  <Label text="mrad">
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="50.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="77.0" text="e(40°-30°)min" />
+                  <Label alignment="CENTER" prefWidth="20.0" text="=" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="48.0" text="0.030" textFill="BLUE" />
+                  <Label text="mrad">
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="50.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="77.0" text="b/a min" />
+                  <Label alignment="CENTER" prefWidth="20.0" text="=" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="48.0" text="1.000" textFill="BLUE" />
+                  <Label prefWidth="20.0" text="m">
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="50.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="77.0" text="Φwind max" />
+                  <Label alignment="CENTER" prefWidth="20.0" text="=" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="48.0" text="16.0" textFill="BLUE" />
+                  <Label prefWidth="20.0" text="°">
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="194.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="77.0" text="KG" />
+                  <Label alignment="CENTER" prefWidth="20.0" text="=" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="48.0" text="11.056" textFill="BLUE" />
+                  <Label prefWidth="20.0" text="m">
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="217.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="77.0" text="Awind" />
+                  <Label alignment="CENTER" prefWidth="20.0" text="=" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="48.0" text="2213.6" textFill="BLUE" />
+                  <Label prefWidth="20.0" text="m²">
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="239.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="77.0" text="hw." />
+                  <Label alignment="CENTER" prefWidth="20.0" text="=" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="48.0" text="11.755" textFill="BLUE" />
+                  <Label prefWidth="20.0" text="m">
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="262.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="77.0" text="lw1" />
+                  <Label alignment="CENTER" prefWidth="20.0" text="=" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="48.0" text="0.173" textFill="BLUE" />
+                  <Label prefWidth="20.0" text="m">
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="284.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="77.0" text="lw2" />
+                  <Label alignment="CENTER" prefWidth="20.0" text="=" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="48.0" text="0.260" textFill="BLUE" />
+                  <Label prefWidth="20.0" text="m">
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="306.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="77.0" text="a" />
+                  <Label alignment="CENTER" prefWidth="20.0" text="=" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="48.0" text="0.087" textFill="BLUE" />
+                  <Label text="mrad">
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="329.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="77.0" text="b" />
+                  <Label alignment="CENTER" prefWidth="20.0" text="=" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="48.0" text="0.050" textFill="BLUE" />
+                  <Label text="mrad">
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="329.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="77.0" text="Θ 0" />
+                  <Label alignment="CENTER" prefWidth="20.0" text="=" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="48.0" text="61.00" textFill="BLUE" />
+                  <Label prefWidth="20.0" text="°">
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="329.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="77.0" text="Θ 1" />
+                  <Label alignment="CENTER" prefWidth="20.0" text="=" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="48.0" text="21.41" textFill="BLUE" />
+                  <Label prefWidth="20.0" text="°">
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="306.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="77.0" text="Θ 2" />
+                  <Label alignment="CENTER" prefWidth="20.0" text="=" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="48.0" text="50.00" textFill="BLUE" />
+                  <Label prefWidth="20.0" text="°">
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="329.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="77.0" text="ΦFlood" />
+                  <Label alignment="CENTER" prefWidth="20.0" text="=" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="48.0" text="51.86" textFill="BLUE" />
+                  <Label prefWidth="20.0" text="°">
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="329.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="77.0" text="Θ Deck imm" />
+                  <Label alignment="CENTER" prefWidth="20.0" text="=" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="48.0" text="35.23" textFill="BLUE" />
+                  <Label prefWidth="20.0" text="°">
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+         <HBox.margin>
+            <Insets left="20.0" />
+         </HBox.margin>
+         <padding>
+            <Insets right="20.0" top="5.0" />
+         </padding>
+      </VBox>
+   </children>
+</HBox>

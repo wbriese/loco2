@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" spacing="50.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox>
+         <children>
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Marking" />
+                  <Label text="TG" GridPane.columnIndex="1" />
+                  <Label text="Weight" GridPane.columnIndex="2" />
+                  <Label text="Volume" GridPane.columnIndex="3" />
+                  <Label text="\%" GridPane.columnIndex="4" />
+                  <Label text="Frob" GridPane.columnIndex="5" />
+                  <Label text="ballast water" GridPane.rowIndex="1" />
+                  <Label text="heavy fuel oil" GridPane.rowIndex="2" />
+                  <Label text="diesel oil" GridPane.rowIndex="3" />
+                  <Label text="lubricating oil" GridPane.rowIndex="4" />
+                  <Label text="fresh water" GridPane.rowIndex="5" />
+                  <Label text="miscellaneous" GridPane.rowIndex="6" />
+                  <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <Label text="Label" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Label text="Label" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Label text="Label" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <Label text="Label" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                  <Label text="Label" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                  <Label text="Label" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                  <Label text="Label" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                  <Label text="Label" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <Label text="Label" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <Label text="Label" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                  <Label text="Label" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                  <Label text="Label" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                  <Label text="Label" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                  <Label text="Label" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+                  <Label text="Label" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                  <Label text="Label" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                  <Label text="Label" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                  <Label text="Label" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                  <Label text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                  <Label text="Label" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+                  <Label text="Label" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+                  <Label text="Label" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                  <Label text="Label" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                  <Label text="Label" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                  <Label text="Label" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+                  <Label text="Label" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+                  <Label text="Label" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+                  <Label text="Label" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+               </children>
+            </GridPane>
+            <SVGPath content="M 0 0 H 200 V50 H0 V0" />
+         </children>
+         <VBox.margin>
+            <Insets left="10.0" top="10.0" />
+         </VBox.margin>
+      </HBox>
+      <TableView>
+        <columns>
+          <TableColumn prefWidth="75.0" text="Marking" />
+          <TableColumn prefWidth="75.0" text="Synonym" />
+            <TableColumn prefWidth="29.20001220703125" />
+            <TableColumn prefWidth="121.59994506835938" text="Level [m]-Max">
+               <columns>
+                  <TableColumn prefWidth="60.799957275390625" text="[m]" />
+                  <TableColumn prefWidth="60.00006103515625" text="max" />
+               </columns>
+            </TableColumn>
+            <TableColumn prefWidth="179.2000732421875" text="Volume">
+               <columns>
+                  <TableColumn prefWidth="75.0" text="[cbm]" />
+                  <TableColumn prefWidth="75.0" text="max" />
+               </columns>
+            </TableColumn>
+            <TableColumn prefWidth="75.0" text="Density" />
+            <TableColumn prefWidth="75.0" text="Weight">
+               <columns>
+                  <TableColumn prefWidth="75.0" text="[t]" />
+                  <TableColumn prefWidth="75.0" text="max" />
+               </columns>
+            </TableColumn>
+            <TableColumn prefWidth="75.0" text="Capacity" />
+            <TableColumn prefWidth="75.0" text="FSM [tm]" />
+            <TableColumn prefWidth="24.8001708984375" text="F" />
+            <TableColumn prefWidth="54.00006103515625" text="lcg [m]" />
+            <TableColumn prefWidth="50.0" text="tcg [m]" />
+            <TableColumn prefWidth="54.7999267578125" text="vcg [m]" />
+        </columns>
+         <VBox.margin>
+            <Insets left="10.0" />
+         </VBox.margin>
+      </TableView>
+   </children>
+</VBox>

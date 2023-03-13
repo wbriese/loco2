@@ -1,0 +1,807 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+
+<VBox spacing="50.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wbriese.loco2.ShipTotalController">
+   <children>
+      <HBox spacing="50.0">
+         <children>
+            <GridPane gridLinesVisible="true" style="-fx-background-color: LIGHTGREY;">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Marking" GridPane.halignment="LEFT">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label layoutX="15.0" layoutY="15.0" text="weight [t]" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="15.0" text="lcg [m]" GridPane.columnIndex="2" GridPane.halignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="15.0" text="tcg [m]" GridPane.columnIndex="3" GridPane.halignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="336.0" layoutY="15.0" text="vcg [m]" GridPane.columnIndex="4" GridPane.halignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="15.0" text="frob [tm]" GridPane.columnIndex="5" GridPane.halignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label styleClass="row" stylesheets="@application.css" text="Light ship" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="45.0" styleClass="row" stylesheets="@application.css" text="Cover" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="15.0" styleClass="row" stylesheets="@application.css" text="Stores" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="15.0" styleClass="row" stylesheets="@application.css" text="TOTAL" GridPane.rowIndex="10">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="15.0" styleClass="row" stylesheets="@application.css" text="Bulk/Grain" GridPane.rowIndex="9">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="15.0" styleClass="row" stylesheets="@application.css" text="Free input" GridPane.rowIndex="8">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="15.0" styleClass="row" stylesheets="@application.css" text="Special Cargo" GridPane.rowIndex="7">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="15.0" styleClass="row" stylesheets="@application.css" text="Container" GridPane.rowIndex="6">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="15.0" styleClass="row" stylesheets="@application.css" text="Hold Water" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="15.0" styleClass="row" stylesheets="@application.css" text="Tanks" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="lightShipMassLabel" text="1924" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="bulkFROB" layoutX="171.0" layoutY="45.0" text="1.924" GridPane.columnIndex="5" GridPane.rowIndex="9">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="freeInputFROB" layoutX="10.0" layoutY="15.0" text="1.924" GridPane.columnIndex="5" GridPane.rowIndex="8">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="specialCargoFROB" layoutX="10.0" layoutY="15.0" text="1.924" GridPane.columnIndex="5" GridPane.rowIndex="7">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="containerFROB" layoutX="10.0" layoutY="15.0" text="1.924" GridPane.columnIndex="5" GridPane.rowIndex="6">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="holdWaterFROB" layoutX="10.0" layoutY="15.0" text="1.924" GridPane.columnIndex="5" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="tanksFROB" layoutX="10.0" layoutY="15.0" text="1.924" GridPane.columnIndex="5" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="storesFROB" layoutX="10.0" layoutY="15.0" text="1.924" GridPane.columnIndex="5" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="coverFROB" layoutX="10.0" layoutY="15.0" text="1.924" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="lightShipFROB" layoutX="10.0" layoutY="15.0" text="1.924" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="bulkVCG" layoutX="10.0" layoutY="15.0" text="1.924" GridPane.columnIndex="4" GridPane.rowIndex="9">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="freeInputVCG" layoutX="10.0" layoutY="15.0" text="1.924" GridPane.columnIndex="4" GridPane.rowIndex="8">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="specialCargoVCG" layoutX="10.0" layoutY="15.0" text="1.924" GridPane.columnIndex="4" GridPane.rowIndex="7">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="containerVCG" layoutX="10.0" layoutY="15.0" text="1.924" GridPane.columnIndex="4" GridPane.rowIndex="6">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="holdWaterVCG" layoutX="10.0" layoutY="15.0" text="1.924" GridPane.columnIndex="4" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="tanksVCG" layoutX="10.0" layoutY="15.0" text="1.924" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="storesVCG" layoutX="10.0" layoutY="15.0" text="1.924" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="coverVCG" layoutX="10.0" layoutY="15.0" text="1.924" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="lightShipVCG" layoutX="10.0" layoutY="15.0" text="1.924" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="bulkTCG" layoutX="10.0" layoutY="15.0" text="1.924" GridPane.columnIndex="3" GridPane.rowIndex="9">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="freeInputTCG" layoutX="10.0" layoutY="15.0" text="1.924" GridPane.columnIndex="3" GridPane.rowIndex="8">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="specialCargoTCG" layoutX="10.0" layoutY="15.0" text="1.924" GridPane.columnIndex="3" GridPane.rowIndex="7">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="containerTCG" layoutX="10.0" layoutY="15.0" text="1.924" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="holdWaterTCG" layoutX="10.0" layoutY="15.0" text="1.924" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="tanksTCG" layoutX="10.0" layoutY="15.0" text="1.924" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="storesTCG" layoutX="10.0" layoutY="15.0" text="1.924" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="coverTCG" layoutX="10.0" layoutY="15.0" text="1.924" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="lightShipTCG" layoutX="10.0" layoutY="15.0" text="1.924" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="bulkLCG" layoutX="10.0" layoutY="15.0" text="1.924" GridPane.columnIndex="2" GridPane.rowIndex="9">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="freeInputLCG" layoutX="10.0" layoutY="15.0" text="1.924" GridPane.columnIndex="2" GridPane.rowIndex="8">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="specialCargoLCG" layoutX="10.0" layoutY="15.0" text="1.924" GridPane.columnIndex="2" GridPane.rowIndex="7">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="containerLCG" layoutX="10.0" layoutY="15.0" text="1.924" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="holdWaterLCG" layoutX="10.0" layoutY="15.0" text="1.924" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="tanksLCG" layoutX="10.0" layoutY="15.0" text="1.924" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="storesLCG" layoutX="10.0" layoutY="15.0" text="1.924" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="coverLCG" layoutX="10.0" layoutY="15.0" text="1.924" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="lightShipLCG" layoutX="10.0" layoutY="15.0" text="1.924" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="bulkMass" layoutX="10.0" layoutY="15.0" text="1.924" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="freeInputMass" layoutX="10.0" layoutY="15.0" text="1.924" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="specialCargoMass" layoutX="10.0" layoutY="15.0" text="1.924" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="containerMass" layoutX="10.0" layoutY="15.0" text="1.924" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="holdWaterMass" layoutX="10.0" layoutY="15.0" text="1.924" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="tanksMass" layoutX="10.0" layoutY="15.0" text="1.924" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="storesMassLabel" layoutX="10.0" layoutY="15.0" text="1924" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="coverMass" layoutX="10.0" layoutY="15.0" text="1.924" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="totalMass" layoutX="171.0" layoutY="285.0" text="1.924" GridPane.columnIndex="1" GridPane.rowIndex="10">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="totalFROB" layoutX="168.0" layoutY="315.0" text="1.924" GridPane.columnIndex="5" GridPane.rowIndex="10">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="totalVCG" layoutX="10.0" layoutY="15.0" text="1.924" GridPane.columnIndex="4" GridPane.rowIndex="10">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="totalTCG" layoutX="10.0" layoutY="15.0" text="1.924" GridPane.columnIndex="3" GridPane.rowIndex="10">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="totalLCG" layoutX="10.0" layoutY="15.0" text="1.924" GridPane.columnIndex="2" GridPane.rowIndex="10">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+               <HBox.margin>
+                  <Insets left="5.0" top="5.0" />
+               </HBox.margin>
+            </GridPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label text="m" AnchorPane.leftAnchor="270.0" AnchorPane.topAnchor="65.0" />
+                  <Label text="dma  =" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="65.0" />
+                  <Label text="drafts on marks (dm.) " underline="true" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="10.0" />
+                  <Label layoutX="10.0" layoutY="10.0" text="dmf   =" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="25.0" />
+                  <Label fx:id="dmfLabel" layoutX="10.0" layoutY="10.0" text="0" textFill="BLUE" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="25.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="10.0" text="drf   = " AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="25.0" />
+                  <Label layoutX="10.0" layoutY="10.0" text="0" AnchorPane.leftAnchor="235.0" AnchorPane.topAnchor="25.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="10.0" text="drafts on perpendiculars (dr.)" underline="true" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="10.0" />
+                  <Label layoutX="10.0" layoutY="10.0" text="dmm =" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="45.0" />
+                  <Label fx:id="dmmLabel" text="0" textFill="BLUE" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="45.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="m" AnchorPane.leftAnchor="85.0" AnchorPane.topAnchor="45.0" />
+                  <Label text="m" AnchorPane.leftAnchor="85.0" AnchorPane.topAnchor="25.0" />
+                  <Label text="m  ≥" AnchorPane.leftAnchor="270.0" AnchorPane.topAnchor="25.0" />
+                  <Label layoutX="275.0" layoutY="35.0" text="drm =" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="45.0" />
+                  <Label layoutX="285.0" layoutY="45.0" text="0" AnchorPane.leftAnchor="235.0" AnchorPane.topAnchor="45.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="295.0" layoutY="55.0" text="m" AnchorPane.leftAnchor="270.0" AnchorPane.topAnchor="45.0" />
+                  <Label fx:id="dmaLabel" layoutX="305.0" layoutY="65.0" text="0" textFill="BLUE" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="65.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="315.0" layoutY="75.0" text="m    ≤ " AnchorPane.leftAnchor="85.0" AnchorPane.topAnchor="65.0" />
+                  <Label text="0" textFill="BLUE" AnchorPane.leftAnchor="235.0" AnchorPane.topAnchor="65.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="dra  =" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="65.0" />
+                  <Label text="0" AnchorPane.leftAnchor="125.0" AnchorPane.topAnchor="65.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="m" AnchorPane.leftAnchor="160.0" AnchorPane.topAnchor="65.0" />
+                  <Label text="OK" textFill="BLUE" AnchorPane.leftAnchor="175.0" AnchorPane.topAnchor="65.0" />
+                  <Label text="m" AnchorPane.leftAnchor="335.0" AnchorPane.topAnchor="25.0" />
+                  <Label text="0" textFill="RED" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="25.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="nOK" textFill="RED" AnchorPane.leftAnchor="350.0" AnchorPane.topAnchor="25.0">
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="268.0" text="Permissable Trim Range:" underline="true" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="150.0" />
+                  <Label layoutX="8.0" layoutY="176.0" text="0" textFill="RED" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="176.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="47.0" layoutY="176.0" text="m ≤ trim =" AnchorPane.leftAnchor="47.0" AnchorPane.topAnchor="176.0" />
+                  <Label layoutX="151.0" layoutY="176.0" text="m ≤ " AnchorPane.leftAnchor="151.0" AnchorPane.topAnchor="176.0" />
+                  <Label layoutX="112.0" layoutY="176.0" text="0" textFill="RED" AnchorPane.leftAnchor="112.0" AnchorPane.topAnchor="176.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="191.0" layoutY="176.0" text="0" textFill="BLUE" AnchorPane.leftAnchor="191.0" AnchorPane.topAnchor="176.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="251.0" layoutY="176.0" text="nOK" textFill="RED" AnchorPane.leftAnchor="251.0" AnchorPane.topAnchor="176.0" />
+                  <Label layoutX="231.0" layoutY="176.0" text="m" AnchorPane.leftAnchor="231.0" AnchorPane.topAnchor="176.0" />
+                  <Label layoutX="6.0" layoutY="82.0" prefHeight="51.0" prefWidth="318.0" text="Note: The forward draft shall be kept over 4.514m for bottom slamming in case of rough sea expected !" textFill="DARKGRAY" wrapText="true">
+                     <font>
+                        <Font name="System Italic" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+         <children>
+            <VBox spacing="5.0">
+               <children>
+                  <Label text="Parameter of stability" underline="true">
+                     <VBox.margin>
+                        <Insets left="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <AnchorPane VBox.vgrow="NEVER">
+                     <children>
+                        <Label layoutX="5.0" text="KM" />
+                        <Label layoutX="31.0" text="=" />
+                        <Label fx:id="kmLabel" layoutX="50.0" text="0" AnchorPane.rightAnchor="32.8" />
+                        <Label layoutX="85.0" text="m" AnchorPane.leftAnchor="85.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="10.0" layoutY="32.0">
+                     <children>
+                        <Label layoutX="5.0" text="KGo" />
+                        <Label layoutX="31.0" text="=" />
+                        <Label fx:id="kgoLabel" layoutX="50.0" text="0" AnchorPane.rightAnchor="32.8" />
+                        <Label layoutX="85.0" text="m" AnchorPane.leftAnchor="85.0" />
+                     </children>
+                  </AnchorPane>
+                  <Separator />
+                  <AnchorPane layoutX="10.0" layoutY="38.0">
+                     <children>
+                        <Label layoutX="5.0" text="GMo" />
+                        <Label layoutX="31.0" text="=" />
+                        <Label fx:id="gmoLabel" layoutX="50.0" text="0" AnchorPane.rightAnchor="32.8" />
+                        <Label layoutX="85.0" text="m" AnchorPane.leftAnchor="85.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="10.0" layoutY="91.0">
+                     <children>
+                        <Label layoutX="5.0" text="dGM" />
+                        <Label layoutX="31.0" text="=" />
+                        <Label fx:id="dgmLabel" layoutX="50.0" text="0" AnchorPane.rightAnchor="32.8" />
+                        <Label layoutX="85.0" text="m" AnchorPane.leftAnchor="85.0" />
+                     </children>
+                  </AnchorPane>
+                  <Separator layoutX="10.0" layoutY="82.0" />
+                  <AnchorPane layoutX="10.0" layoutY="113.0">
+                     <children>
+                        <Label layoutX="5.0" text="GM" />
+                        <Label layoutX="31.0" text="=" />
+                        <Label fx:id="gmLabel" layoutX="50.0" text="0" AnchorPane.rightAnchor="32.8">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="85.0" text="m" AnchorPane.leftAnchor="85.0" />
+                     </children>
+                  </AnchorPane>
+                  <Separator prefHeight="7.0" prefWidth="96.0" style="-fx-background-color: black;" />
+                  <AnchorPane>
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                     <children>
+                        <Label text="TΦ  " AnchorPane.leftAnchor="5.0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="25.0" text="=" AnchorPane.leftAnchor="30.0" />
+                        <Label fx:id="tLabel" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="33.0" text="0" AnchorPane.leftAnchor="50.0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="85.0" text="s" />
+                     </children>
+                  </AnchorPane>
+               </children>
+               <HBox.margin>
+                  <Insets left="5.0" top="5.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox spacing="5.0">
+               <children>
+                  <Label text="Propeller immersion" underline="true" />
+                  <HBox spacing="5.0">
+                     <children>
+                        <Label prefWidth="60.0" text="Immersion" />
+                        <Label text="=" />
+                        <Label alignment="CENTER_RIGHT" layoutX="70.0" layoutY="10.0" prefWidth="40.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="70.0" layoutY="10.0" text="\%" />
+                        <Label layoutX="134.0" layoutY="10.0" text="OK" textFill="BLUE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Label prefWidth="160.0" text="Note: If propeller immersion is less than 50% propeller tips are not immersed !" textFill="DARKGRAY" wrapText="true">
+                     <font>
+                        <Font name="System Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <HBox layoutX="10.0" layoutY="32.0" spacing="5.0">
+                     <children>
+                        <Label prefWidth="60.0" text="V actual" />
+                        <Label text="=" />
+                        <Label alignment="CENTER_RIGHT" layoutX="70.0" layoutY="10.0" prefWidth="40.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="70.0" layoutY="10.0" text="m" />
+                     </children>
+                  </HBox>
+                  <Separator />
+                  <HBox layoutX="10.0" layoutY="111.0" spacing="5.0">
+                     <children>
+                        <Label prefWidth="60.0" text="V SOLAS" />
+                        <Label text="=" />
+                        <Label alignment="CENTER_RIGHT" layoutX="70.0" layoutY="10.0" prefWidth="40.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="70.0" layoutY="10.0" text="m" />
+                        <Label layoutX="134.0" layoutY="10.0" text="nOK" textFill="RED">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+            </VBox>
+            <Group>
+               <children>
+                  <SVGPath fx:id="sideViewSVG" content="M 0 0 H 300 V -30 H 0 V 0" fill="#1d1d1d" stroke="BLACK" />
+                  <Line fx:id="line" endX="178.19998168945312" endY="-3.0517578125E-5" startX="-160.199951171875" startY="-3.0517578125E-5" stroke="#40e2ff" />
+               </children>
+            </Group>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+   </children>
+</VBox>

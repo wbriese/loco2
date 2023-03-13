@@ -1,0 +1,41 @@
+{
+  "imo": 97657,
+  "shipname": "BBC Russia",
+  "weightlist": [
+    
+    {
+      "id": "Cargo 1",
+      "type": "cargo",
+      "mass": 7588.0,
+      "lcg": 72.798,
+      "tcg": -0.603,
+      "vcg": 11.639,
+      "fsm": 68.7,
+      "xa": 0.0,
+      "xf":0.0,
+    },
+    {
+      "id": "Stores",
+      "type": "stores",
+      "mass": 604.3,
+      "lcg": 77.4,
+      "tcg": 0.51,
+      "vcg": 8.91,
+      "fsm": 0.0,
+      "xa" : 0.0,
+      "xf" : 0.0
+    }
+  ],
+  "tanklist": [
+    {
+      "id": "HFO tank 1",
+      "mass": 1137.1,
+      "density": 1.025
+    },
+    {
+      "id": "Ballast tank 2",
+      "mass": 10,
+      "density": 1.025
+    }
+  ]
+}

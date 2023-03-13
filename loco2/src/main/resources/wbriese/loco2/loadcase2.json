@@ -1,0 +1,66 @@
+{
+  "imo": "9700380",
+  "shipname": "JAN",
+  "weightlist": [
+    
+    {
+      "id": "Cargo 1",
+      "type": "cargo",
+      "mass": 7588.0,
+      "lcg": 72.798,
+      "tcg": -0.603,
+      "vcg": 11.639,
+      "fsm": 68.7,
+      "xa": 28.8,
+      "xf":124.8
+    },
+    {
+      "id": "Stores",
+      "type": "stores",
+      "mass": 60,
+      "lcg": 20.0,
+      "tcg": 0.51,
+      "vcg": 8.91,
+      "fsm": 0.0,
+      "xa" : 7.2,
+      "xf" : 27.3
+    }
+  ],
+  "tanklist": [
+    {
+      "id": "WB BOTTOM 2P",
+      "mass": 224.5,
+      "density": 1.025
+    },
+    {
+      "id": "WB SIDE 4S",
+      "mass": 118.25,
+      "density": 1.025
+    },
+    {
+      "id": "NO.3 HFO STOR.TK.(LS)(P)",
+      "mass": 57.5,
+      "density": 0.98
+    },
+    {
+      "id": "MGO STOR.TK.",
+      "mass": 26.25,
+      "density": 0.85
+    },
+    {
+      "id": "M/E L.O.SUMP.TK.",
+      "mass": 7.8,
+      "density": 0.9
+    },
+    {
+      "id": "NO.1 CARGO HOLD",
+      "mass": 179,
+      "density": 0.5
+    },
+    {
+      "id": "NO.2 CARGO HOLD",
+      "mass": 1600,
+      "density": 0.5
+    }
+  ]
+}

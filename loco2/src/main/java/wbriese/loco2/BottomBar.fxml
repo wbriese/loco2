@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox prefHeight="65.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wbriese.loco2.BottomBarController">
+         <children>
+            <VBox prefHeight="70.0" prefWidth="35.0" spacing="5.0">
+               <children>
+                  <Label text="drf">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+                  <Label prefHeight="17.0" prefWidth="36.0" text="drm" />
+                  <Label layoutX="10.0" layoutY="27.0" text="dra" />
+               </children>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </VBox>
+            <VBox alignment="TOP_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="50.0" spacing="5.0">
+               <children>
+                  <Label fx:id="drfLabel" text="1.12">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="drmLabel" text="4.38">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="draLabel" layoutX="10.0" layoutY="27.0" text="7.52">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+         <HBox.margin>
+            <Insets right="5.0" />
+         </HBox.margin>
+            </VBox>
+            <VBox layoutX="40.0" layoutY="10.0" prefHeight="100.0" prefWidth="30.0" spacing="5.0">
+               <children>
+                  <Label text="m">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="m">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="27.0" text="m">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <VBox layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="35.0" spacing="5.0">
+               <children>
+                  <Label text="trim">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+                  <Label prefHeight="17.0" prefWidth="36.0" text="list" />
+                  <Label layoutX="10.0" layoutY="27.0" text="GM" />
+               </children>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </VBox>
+            <VBox layoutX="45.0" layoutY="10.0" prefHeight="100.0" prefWidth="30.0" spacing="5.0">
+               <children>
+                  <Label fx:id="trimLabel" text="1.12">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="listLabel" text="4.38" textAlignment="RIGHT">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="GMLabel" layoutX="10.0" layoutY="27.0" text="7.52">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox layoutX="75.0" layoutY="10.0" prefHeight="100.0" prefWidth="30.0" spacing="5.0">
+               <children>
+                  <Label text="m">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="°">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="27.0" text="m">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <Separator layoutX="105.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" />
+            <VBox layoutX="111.0" layoutY="10.0" prefHeight="65.0" prefWidth="53.0" spacing="5.0">
+               <children>
+                  <Label text="SFmax">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+                  <Label prefHeight="17.0" prefWidth="45.0" text="BMmax" />
+                  <Label layoutX="10.0" layoutY="27.0" text="TMax" />
+               </children>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </VBox>
+            <VBox layoutX="176.0" layoutY="10.0" prefHeight="100.0" prefWidth="30.0" spacing="5.0">
+               <children>
+                  <Label text="58.5">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="60.2">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="27.0" text="34.9">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox layoutX="146.0" layoutY="10.0" prefHeight="100.0" prefWidth="30.0" spacing="5.0">
+               <children>
+                  <Label text="\%">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="\%" textAlignment="RIGHT">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="27.0" text="\%">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <Separator layoutX="206.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" />
+            <VBox layoutX="212.0" layoutY="10.0" prefHeight="65.0" prefWidth="81.0" spacing="5.0">
+               <children>
+                  <Label text="frsm">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+                  <Label prefHeight="17.0" prefWidth="82.0" text="displacement" />
+                  <Label layoutX="10.0" layoutY="27.0" text="reserve" />
+               </children>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </VBox>
+            <VBox layoutX="266.0" layoutY="10.0" prefHeight="65.0" prefWidth="45.0" spacing="5.0">
+               <children>
+                  <Label text="4245.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="displacementLabel" text="9324.8">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="27.0" text="10557.8">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox layoutX="296.0" layoutY="10.0" prefHeight="100.0" prefWidth="30.0" spacing="5.0">
+               <children>
+                  <Label text="tm">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="t" textAlignment="RIGHT">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="27.0" text="t">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <Separator layoutX="326.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" />
+         </children>
+      </HBox>
